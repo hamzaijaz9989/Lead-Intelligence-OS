@@ -55,3 +55,7 @@ Track run ID, agent/task, input scope, start/end, provider, request counts, retr
 - Do not mount personal directories or privileged host interfaces into an untrusted execution environment.
 - Redact secrets and unnecessary personal data from logs.
 - Backups, deletion and retention policies must be defined before production use.
+
+
+## M1 implementation choice — local-first prototype
+For the first vertical slice, use a static browser application with no server, no external API calls and no secrets. Persist prototype records in browser localStorage. This is suitable only for synthetic/test data and initial UX validation: data is per browser/device, can be cleared by the user/browser, is not a secure multi-user database and is not synchronised. Do not enter real prospect personal data. A secure backend and access controls are required before real-world contact dossiers or shared team use.
