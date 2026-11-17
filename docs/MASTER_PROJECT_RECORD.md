@@ -149,11 +149,14 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - Preliminary review of OpenProspector completed; it is not being adopted as the MVP base at this stage.
 
 **Not yet done**
-- Implement and verify the first working prospect dossier slice.
-- Test locally and verify GitHub Pages deployment.
-- No live enrichment providers or automated agents are connected yet.
+- Confirm the GitHub Actions validation workflow passes.
+- Confirm GitHub Pages is enabled and deployment succeeds.
+- Run browser-level functional testing on desktop and mobile.
+- Add automated tests for scoring, evidence parsing, review and export behaviour.
+- Add the next stage: ExactFlow capability mapping and assisted research/pitch generation.
+- No live enrichment providers or autonomous research agents are connected yet.
 
-**Current phase:** Milestone 1 implementation — local-first prospect dossier vertical slice. Repository is public by choice.
+**Current phase:** Milestone 1 implementation — prototype committed; validation and deployment verification pending. Repository is public by choice.
 
 ## 15. Next actions
 
