@@ -1,6 +1,6 @@
 # Master Project Record — Lead Intelligence OS
 
-**Status:** Milestone 1 approved; first implementation in progress  
+**Status:** M1 dashboard deployed; M2 manual discovery and channel intelligence implemented, automated verification pending  
 **Version:** 1.0  
 **Last updated:** 2026-11-17  
 **Repository:** https://github.com/hamzaijaz9989/Lead-Intelligence-OS  
@@ -142,7 +142,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - User approved Milestone 1.
 - Preliminary OpenProspector review completed; decision is not to import it into the MVP.
 - Static browser prototype committed at `index.html`.
-- Prototype supports manual company capture, business notes, source URLs, fact/hypothesis/unknown evidence claims, weighted ICP assessment, dossier view, review states, manual demo-booked flag, search/filter and CSV export.\n- Added a responsive sales dashboard with KPI cards, prospect pipeline counts, ICP grade distribution, nine-agent command-centre status cards (clearly marked not connected/manual prototype), and a one-click synthetic demo dataset loader.
+- Prototype supports manual company capture, business notes, source URLs, fact/hypothesis/unknown evidence claims, weighted ICP assessment, dossier view, review states, manual demo-booked flag, search/filter and CSV export.\n- Added a responsive sales dashboard with KPI cards, prospect pipeline counts, ICP grade distribution, nine-agent command-centre status cards (clearly marked not connected/manual prototype), and a one-click synthetic demo dataset loader.\n- M2 implementation: added discovery stage tracking (discovered/researching/qualified/rejected), discovery source type, multi-channel map (channel URL, confirmed/likely/unverified status and optional evidence URL), discovery-stage filters and dashboard counts, canonical-domain duplicate prevention, and CSV export fields.
 - ICP scoring now distinguishes unassessed categories from zero points. It displays evidence coverage and withholds a grade/high-priority designation below 60% weighted coverage.
 - Company website input is canonicalised to a lowercase hostname with leading `www.` removed; user-entered links are restricted to HTTP(S) before rendering.
 - Added `scripts/validate.mjs` for syntax/feature checks, `scripts/test-core.mjs` for scoring/evidence helper tests, a GitHub Actions validation workflow and a GitHub Pages deployment workflow.
@@ -152,10 +152,10 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - GitHub Pages deployment has not been retrieved/confirmed.
 - Browser-level functional testing on desktop/mobile remains outstanding, including the new dashboard and demo-data loader.
 - Automated behaviour tests for score calculations, evidence parsing, review actions and CSV export remain outstanding.
-- ExactFlow capability mapping, assisted web research, the nine live agent workflows, decision-maker/contact enrichment and pipeline/follow-up management are not connected yet.
+- Live automated company discovery/search providers, operational research, the nine live agent workflows, decision-maker/contact enrichment and pipeline/follow-up management are not connected yet.
 - No backend database, secure multi-user persistence, external data provider or outbound messaging integration exists.
 
-**Current phase:** M1 prototype committed; latest validation and core helper tests passed in GitHub Actions (run #25 on `c691eb6`). GitHub Pages deployment initially failed because the Pages site was not yet enabled (`configure-pages` returned 404). The deployment workflow was updated in commit `0e0b9d7` to set `enablement: true`; deployment run #8 then succeeded, including Configure Pages, artifact upload and deployment. The expected Pages URL is `https://hamzaijaz9989.github.io/Lead-Intelligence-OS/`; user-side browser confirmation remains pending. Browser-level verification remains pending. Repository is public by choice.
+**Current phase:** M1 dashboard and Pages deployment succeeded. M2 manual discovery and channel intelligence are implemented in `index.html` (latest UI feature commit `022f5e7`), with tests and validation scripts updated. M2 GitHub Actions verification is pending. Pages deployment workflow is configured for automatic deploys on `index.html` changes. Repository is public by choice; use synthetic data only.
 
 ## 15. Next actions
 
