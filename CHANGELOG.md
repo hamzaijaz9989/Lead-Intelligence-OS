@@ -116,3 +116,5 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Added parser validation and core tests for area, status and optional evidence URL.
 - Updated PRD, data model, workflows, Master Project Record and milestone tracker.
 - Initial feature commit `42dd282` had an inline parser line-break defect; corrected in `906cb6a`. Validation passed on `906cb6a` (run `44004662360`). The latest helper-test run and Pages deployment are being checked separately.
+
+- Corrected the operational signal test fixture to use actual newline-separated records (commit `dcaf40b`). Latest validation run `44004843959` passed, including application syntax, scoring/evidence, channel parsing and operational intelligence parsing. GitHub Pages deployment run `44004662398` for app commit `906cb6a` passed. Real-device browser acceptance is still outstanding.
