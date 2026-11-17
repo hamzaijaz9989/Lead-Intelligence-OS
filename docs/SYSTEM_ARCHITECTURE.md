@@ -68,3 +68,5 @@ For the first vertical slice, use a static browser application with no server, n
 - `.github/workflows/pages.yml`: publishes the root static site to GitHub Pages.
 - Browser localStorage is used for prototype persistence only. It is device/browser-specific, can be cleared, is not a backup, is not shared, and is not appropriate for real prospect personal data.
 - GitHub Actions and Pages execution results have not yet been verified. No browser-level test has been completed.
+
+The prototype normalises valid website input to a lowercase hostname and strips a leading `www.` before storing it as the company domain.
