@@ -45,3 +45,8 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Reconciled M1 tracking with the actual committed prototype files.
 - Clarified that app implementation is committed but automated workflow results and browser-level behaviour remain unverified.
 - Clarified ICP scoring semantics: blank = unassessed; numeric zero = assessed and no points; grade/high-priority requires at least 60% weighted evidence coverage.
+
+## 2026-11-17 — Canonical company domain handling
+- Normalised valid website inputs to lowercase hostnames and removed a leading `www.` for consistent company identity capture.
+- Extended the static validation script to check the canonical-domain helper is present.
+- Validation workflow result and browser behaviour remain unverified.
