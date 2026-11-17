@@ -144,7 +144,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - Static browser prototype committed at `index.html`.
 - Prototype supports manual company capture, business notes, source URLs, fact/hypothesis/unknown evidence claims, weighted ICP assessment, dossier view, review states, manual demo-booked flag, search/filter and CSV export.
 - ICP scoring now distinguishes unassessed categories from zero points. It displays evidence coverage and withholds a grade/high-priority designation below 60% weighted coverage.
-- User-entered URLs are restricted to HTTP(S) before rendering as links.
+- Company website input is canonicalised to a lowercase hostname with leading `www.` removed; user-entered links are restricted to HTTP(S) before rendering.
 - Added `scripts/validate.mjs`, GitHub Actions validation workflow and GitHub Pages deployment workflow.
 
 **Not yet verified / not yet built**
