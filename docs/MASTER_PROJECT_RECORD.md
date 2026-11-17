@@ -137,34 +137,35 @@ Use least privilege, secret management, minimal retention, access controls, safe
 ## 14. Current project status (2026-11-17)
 
 **Completed**
-- GitHub repository found and verified accessible: `hamzaijaz9989/Lead-Intelligence-OS`.
-- Visibility verified as **public** and confirmed intentional by the user. Repository is public; no secrets or real prospect contact data may be committed.
-- Initial README committed.
-- Product north-star and planning baseline captured in this record.
-- Supporting documentation committed: product requirements, architecture proposal, nine agent specifications, logical data model, workflows, security/compliance baseline, milestones, decision log and changelog.
+- Repository `hamzaijaz9989/Lead-Intelligence-OS` is accessible and intentionally public.
+- README, Master Project Record, PRD, architecture proposal, nine agent specifications, logical data model, workflows, security/compliance baseline, milestones, decision log and changelog committed.
+- User approved Milestone 1.
+- Preliminary OpenProspector review completed; decision is not to import it into the MVP.
+- Static browser prototype committed at `index.html`.
+- Prototype supports manual company capture, business notes, source URLs, fact/hypothesis/unknown evidence claims, weighted ICP assessment, dossier view, review states, manual demo-booked flag, search/filter and CSV export.
+- ICP scoring now distinguishes unassessed categories from zero points. It displays evidence coverage and withholds a grade/high-priority designation below 60% weighted coverage.
+- User-entered URLs are restricted to HTTP(S) before rendering as links.
+- Added `scripts/validate.mjs`, GitHub Actions validation workflow and GitHub Pages deployment workflow.
 
-**Completed since foundation**
-- User confirmed public repository visibility is intentional.
-- User approved Milestone 1 scope.
-- Preliminary review of OpenProspector completed; it is not being adopted as the MVP base at this stage.
+**Not yet verified / not yet built**
+- GitHub Actions validation result has not been retrieved/confirmed.
+- GitHub Pages deployment has not been retrieved/confirmed.
+- Browser-level functional testing on desktop/mobile remains outstanding.
+- Automated behaviour tests for score calculations, evidence parsing, review actions and CSV export remain outstanding.
+- ExactFlow capability mapping, assisted web research, the nine live agent workflows, decision-maker/contact enrichment and pipeline/follow-up management are not connected yet.
+- No backend database, secure multi-user persistence, external data provider or outbound messaging integration exists.
 
-**Not yet done**
-- Confirm the GitHub Actions validation workflow passes.
-- Confirm GitHub Pages is enabled and deployment succeeds.
-- Run browser-level functional testing on desktop and mobile.
-- Add automated tests for scoring, evidence parsing, review and export behaviour.
-- Add the next stage: ExactFlow capability mapping and assisted research/pitch generation.
-- No live enrichment providers or autonomous research agents are connected yet.
-
-**Current phase:** Milestone 1 implementation — prototype committed; validation and deployment verification pending. Repository is public by choice.
+**Current phase:** M1 prototype committed; automated and browser verification pending. Repository is public by choice.
 
 ## 15. Next actions
 
-1. Review the committed planning baseline for accuracy.
-2. Audit candidate starter repositories and data providers; do not install before review and approval.
-3. Implement the approved local-first vertical slice: manual company entry → sourced evidence → explainable ICP score → dossier → human review.
-4. Verify behaviour and document local-only storage limitations.
-5. Add a static GitHub Pages deployment workflow; verify deployment after GitHub Actions runs.
+1. Confirm the validation workflow passes and fix any failures.
+2. Confirm GitHub Pages deployment and provide the live app URL.
+3. Run browser-level checks for add/edit/delete, evidence links, scoring/coverage, review states, demo flag and CSV export.
+4. Improve any issues found and update this record.
+5. After M1 verification, agree the next milestone for sourced research and ExactFlow-specific pitch generation.
+
+Do not add real prospect personal data or credentials while the prototype uses browser localStorage and the repository remains public.
 
 ## 16. Change-control rule
 
