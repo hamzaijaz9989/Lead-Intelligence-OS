@@ -11,11 +11,15 @@ const required = [
   'id="prospectForm"',
   'id="leadList"',
   'id="detail"',
+  'id="discoveryStatus"',
+  'id="channels"',
   "localStorage",
   "function totalScore",
-  "function parseClaims",\n  "function parseChannels",\n  "id=\\"discoveryStatus\\"",\n  "id=\\"channels\\"",\n  "data-stage",
+  "function parseClaims",
+  "function parseChannels",
   "function safeUrl",
   "function canonicalDomain",
+  "data-stage",
   "data-review",
   "data-demo"
 ];
@@ -26,4 +30,4 @@ if (source.includes("fetch(") || source.includes("XMLHttpRequest") || source.inc
   throw new Error("Unexpected network request found in local-first prototype.");
 }
 console.log("Lead Intelligence OS static validation passed.");
-console.log("Inline JavaScript parses; core dossier, scoring, evidence, review and local-storage hooks are present.");
+console.log("Inline JavaScript parses; dossier, discovery queue, channel mapping, scoring, evidence and local-storage hooks are present.");
