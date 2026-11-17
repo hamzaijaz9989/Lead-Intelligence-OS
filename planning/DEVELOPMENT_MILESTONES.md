@@ -1,18 +1,18 @@
 # Development Milestones
 
-**Status:** No implementation milestone has been approved yet. This plan is a proposal for agreement.
+**Status:** Milestone 1 approved by the user on 2026-11-17; implementation in progress.
 
 ## M0 — Project foundation (in progress)
 - [x] Repository accessible.
 - [x] README and Master Project Record committed.
 - [x] Commit supporting specifications and decision log.
-- [ ] Agree Milestone 1 scope and acceptance criteria.
-**Exit:** product baseline and repository hygiene are documented; first build target still requires user agreement.
+- [x] User approved Milestone 1 scope and acceptance criteria.
+**Exit:** product baseline documented and M1 approved; M0 closeout pending first vertical-slice verification.
 
-## M1 — Safe foundation evaluation + thin vertical slice (proposed)
+## M1 — Safe foundation evaluation + thin vertical slice (approved)
 Goal: prove one complete, auditable path from a candidate company to a reviewed prospect dossier without sending outreach.
 
-Proposed work:
+Approved work:
 1. Inspect candidate starter repositories and dependencies; compare license, maintenance, architecture, scripts, permissions, secrets, data flows and security concerns.
 2. Select build foundation and runtime only after review.
 3. Establish minimal application skeleton and data model.
@@ -22,13 +22,15 @@ Proposed work:
 7. Render a basic dossier and human review state.
 8. Add run/change logs and tests.
 
-Proposed acceptance:
-- A company can be created with canonical domain and source.
+Acceptance criteria:
+- A company can be created with canonical domain, country and source.
 - At least one evidence item can be attached to a claim.
 - Facts and hypotheses render distinctly.
 - Score and rationale are visible and reproducible.
 - Dossier can be approved/rejected/marked incomplete.
 - No outbound sending or calling capability exists.
+- Browser-only prototype clearly states data is stored locally in the current browser and is not a secure shared database.
+- Public repository contains no credentials or real prospect personal data.
 - Secrets are not committed; tests/build pass; limitations documented.
 
 ## M2 — Company discovery and channel intelligence
