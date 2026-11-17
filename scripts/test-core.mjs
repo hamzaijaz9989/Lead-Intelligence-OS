@@ -12,9 +12,9 @@ const coreSource = [
   between("const categories=[", "let records="),
   between("function safeUrl", "function load"),
   between("function assessment", "function toast"),
-  between("function parseChannels", "function clearForm")
+  between("function buildResearchQueries", "function parseChannels"),\n  between("function parseChannels", "function clearForm")
 ].join("\n");
-const core = new Function(coreSource + "\nreturn { assessment, grade, safeUrl, canonicalDomain, parseClaims, parseChannels, parseOperations };")();
+const core = new Function(coreSource + "\nreturn { assessment, grade, safeUrl, canonicalDomain, parseClaims, parseChannels, parseOperations, buildResearchQueries };")();
 
 assert.equal(core.assessment({}).coverage, 0, "blank criteria should have zero evidence coverage");
 assert.equal(core.grade(100, 0), "Unrated", "no evidence must not receive a grade");
@@ -46,3 +46,12 @@ assert.equal(operations[0].status, "FACT");
 assert.equal(operations[1].status, "HYPOTHESIS");
 assert.equal(operations[1].url, "");
 console.log("Operational intelligence parsing tests passed.");
+
+const research = core.buildResearchQueries("Example Retail", "United Kingdom", "https://www.example.com");
+assert.ok(research.length >= 9, "research pack should cover core operational themes");
+assert.ok(research.some(x => x.label === "Returns and reverse logistics"));
+assert.ok(research.some(x => x.label === "Repair and refurbishment"));
+assert.ok(research.some(x => x.query.includes("site:example.com")), "official-domain query should use canonical domain");
+assert.ok(research.every(x => x.url.startsWith("https://www.google.com/search?q=")), "search links must be encoded HTTPS Google searches");
+assert.ok(research.some(x => decodeURIComponent(x.url).includes("warehouse fulfilment")), "warehouse research query should be present");
+console.log("Assisted company research tests passed.");
