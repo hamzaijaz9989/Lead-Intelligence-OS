@@ -87,3 +87,10 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Updated PRD, logical data model, workflows, milestone tracker and Master Project Record.
 - UI feature commit: `2f0d72b`; dashboard queue commit: `022f5e7`; validation/test updates: `9374a72` and `d301980`.
 - M2 automated validation and Pages deployment outcomes are pending. Live automated discovery, external provider calls and agent orchestration are not enabled.
+
+
+## 2026-11-17 — M2 validation correction and passing checks
+- Fixed an inline JavaScript line-break issue introduced while adding the channel parser.
+- Corrected the channel parser unit test to use actual newline-separated records.
+- GitHub Actions validation run `44004008781` on commit `eafa341` passed both application syntax/feature validation and core helper tests, including channel status parsing.
+- GitHub Pages deployment for the M2 UI commit `47e9d3a` is being checked separately; do not assume the latest page has finished deploying until the deployment run reports success.
