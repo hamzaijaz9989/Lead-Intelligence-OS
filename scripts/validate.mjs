@@ -15,6 +15,7 @@ const required = [
   "function totalScore",
   "function parseClaims",
   "function safeUrl",
+  "function canonicalDomain",
   "data-review",
   "data-demo"
 ];
