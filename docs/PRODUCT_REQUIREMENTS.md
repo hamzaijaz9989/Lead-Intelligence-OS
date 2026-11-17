@@ -107,4 +107,4 @@ The initial static workspace supports manual company capture, source/evidence cl
 ## Scoring clarification for the prototype
 Unassessed ICP categories must remain blank, not be assigned zero. The prototype calculates a normalised score over assessed weighted criteria and separately displays weighted evidence coverage. It withholds a grade and high-priority designation until at least 60% of weighted criteria have been assessed. A scored category with zero points means it was assessed and found not to fit; a blank category means unknown.
 
-The prototype canonicalises a valid company website URL to its lowercase hostname (removing a leading `www.`) for consistent company identity capture.
+The prototype canonicalises a valid company website URL to its lowercase hostname (removing a leading `www.`) for consistent company identity capture. It now also supports manual discovery-stage tracking, discovery source type, multi-channel mapping with evidence/status, canonical-domain duplicate prevention, discovery filters and dashboard queue counts. Live search/provider integrations remain out of scope for this increment.
