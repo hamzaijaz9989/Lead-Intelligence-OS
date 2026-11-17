@@ -93,4 +93,4 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Fixed an inline JavaScript line-break issue introduced while adding the channel parser.
 - Corrected the channel parser unit test to use actual newline-separated records.
 - GitHub Actions validation run `44004008781` on commit `eafa341` passed both application syntax/feature validation and core helper tests, including channel status parsing.
-- GitHub Pages deployment for the M2 UI commit `47e9d3a` is being checked separately; do not assume the latest page has finished deploying until the deployment run reports success.
+- - GitHub Pages deployment run `44003986328` for UI commit `47e9d3a` passed Configure Pages, Upload static site and Deploy to Pages.
