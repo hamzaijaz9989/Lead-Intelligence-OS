@@ -128,3 +128,14 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Improved mobile filter navigation, score grid, dashboard cards and form action visibility.
 - Preserved existing local-first data model, scoring rules, evidence handling and manual-only workflow.
 - UI commit: `0a94c88`. Automated checks and Pages deployment for this visual change are pending.
+
+
+## 2026-11-17 — M3 assisted company research pack
+- Added per-prospect public-web search links for official profile, sales channels, catalogue/inventory, returns, repair/refurbishment, warehouse/fulfilment, suppliers/procurement, growth/hiring and systems/technology.
+- Added a canonical-domain-restricted search query when a website is known.
+- Added clear instructions that search results are research leads, not proof; the operator must inspect original sources and record evidence claims or operational signals.
+- Added responsive styling for the research link list in each dossier.
+- Extended static validation and Node core tests for research pack presence, topic coverage and encoded HTTPS search URLs.
+- No external search API, automatic page retrieval, scraping or live AI research is connected.
+- Feature commits: `afc7f99`, `1377908`; validation/test commits: `dbb51bd`, `490c64c`.
+- Automated validation and Pages deployment are pending.
