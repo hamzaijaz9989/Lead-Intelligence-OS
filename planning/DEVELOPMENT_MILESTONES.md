@@ -58,7 +58,15 @@
 Live automated company discovery/provider integrations are not yet implemented; research entry remains manual in this increment.
 
 ## M3 — Operational intelligence
-Research and evidence for inventory, catalogue, returns, repair/refurbishment, warehouses, fulfilment and procurement.
+**Initial manual-capture slice implemented; automated research not connected.**
+- [x] Record operational signals by area (catalogue, inventory, returns, repair, warehouse, fulfilment, procurement, systems, growth or other).
+- [x] Label each signal FACT / HYPOTHESIS / UNKNOWN and optionally attach a source URL.
+- [x] Display signals in dossiers and include them in search and CSV export.
+- [x] Add parser validation and core tests for signal structure.
+- [x] Static validation passed on feature commit `906cb6a` (run `44004662360`).
+- [ ] Verify latest core-test run and Pages deployment after parser-test updates.
+- [ ] Browser-test operational signal entry, edit persistence, dossier rendering, search and CSV export.
+- [ ] Build permitted-source automated research only after source/provider terms and provenance are designed.
 
 ## M4 — Decision-maker and contact intelligence
 People, phone/email/social routes, source provenance, verification and channel eligibility.
