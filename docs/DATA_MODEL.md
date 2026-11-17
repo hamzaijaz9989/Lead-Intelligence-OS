@@ -36,3 +36,6 @@ Company 1:N aliases, channels, operational signals, people, contacts, evidence, 
 - Enforce suppression at recommendation and action time.
 - Use unique constraints/dedupe keys where safe, with human merge support.
 - Minimise retained personal data and define retention/deletion rules before production.
+
+## Operational intelligence records (prototype)
+Each company may hold an array of operational signal records: `area`, `status` (FACT/HYPOTHESIS/UNKNOWN), `finding`, and optional `url`. Signals are stored inside the local browser company record as an `operations` array. A future backend should normalise these into an OperationalSignals table with source IDs, capture dates, confidence and last-checked timestamps. Do not treat hypotheses as verified facts.
