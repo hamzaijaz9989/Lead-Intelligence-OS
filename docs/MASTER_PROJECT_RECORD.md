@@ -155,7 +155,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - ExactFlow capability mapping, assisted web research, the nine live agent workflows, decision-maker/contact enrichment and pipeline/follow-up management are not connected yet.
 - No backend database, secure multi-user persistence, external data provider or outbound messaging integration exists.
 
-**Current phase:** M1 prototype committed; automated and browser verification pending. Repository is public by choice.
+**Current phase:** M1 prototype committed; latest validation and core helper tests passed in GitHub Actions (run #25 on `c691eb6`). GitHub Pages deployment initially failed because the Pages site was not yet enabled (`configure-pages` returned 404). The deployment workflow has now been updated in commit `0e0b9d7` to set `enablement: true`; the resulting deployment run and live site are pending verification. Browser-level verification remains pending. Repository is public by choice.
 
 ## 15. Next actions
 
