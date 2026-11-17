@@ -88,14 +88,18 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{max-width
     <div class="field"><label for="discoveryStatus">Discovery stage</label><select id="discoveryStatus"><option value="discovered">Discovered</option><option value="researching">Researching</option><option value="qualified">Qualified</option><option value="rejected">Rejected</option></select></div>
     <div class="field"><label for="sourceType">Discovery source type</label><select id="sourceType"><option value="company website">Company website</option><option value="search engine">Search engine</option><option value="business directory">Business directory</option><option value="marketplace">Marketplace public listing</option><option value="social profile">Public social profile</option><option value="referral">Referral</option><option value="other">Other</option></select></div>
    </div>
+   <details class="details-group"><summary>Research profile, channels &amp; evidence <span class="footnote">Optional · expand to add detail</span></summary><div class="details-content">
    <div class="field"><label for="channels">Sales channels (one per line)</label><textarea id="channels" placeholder="CHANNEL | Shopify / own store | https://shop.example | CONFIRMED | https://source.example&#10;CHANNEL | Amazon | https://amazon.example/store | LIKELY | https://source.example"></textarea><p class="footnote">Format: CHANNEL | channel name | channel URL | CONFIRMED / LIKELY / UNVERIFIED | evidence source URL. Only mark confirmed when your source supports it.</p></div>
    <div class="field"><label for="products">Products / brands</label><input id="products" placeholder="What do they sell?"></div>
    <div class="field"><label for="sourceUrl">Primary research source URL</label><input id="sourceUrl" type="url" placeholder="https://..."></div>
    <div class="field"><label for="summary">Business understanding / research notes</label><textarea id="summary" placeholder="Describe what is known about the business. Separate facts from assumptions."></textarea></div>
    <div class="field"><label for="claims">Evidence claims (one per line)</label><textarea id="claims" placeholder="FACT | Sells through Shopify and Amazon | https://source.example/page&#10;HYPOTHESIS | May need multi-channel inventory visibility | https://source.example/page&#10;UNKNOWN | Number of warehouse locations |"></textarea><p class="footnote">Format: FACT or HYPOTHESIS or UNKNOWN | claim | source URL (optional). Only use FACT when the source supports it.</p></div>
+   </div></details>
+   <details class="details-group"><summary>ICP scoring &amp; qualification <span class="footnote">Optional · evidence-led score</span></summary><div class="details-content">
    <div class="score-title"><strong>ICP assessment</strong><span class="score-total" id="scoreTotal">0 / 100</span></div>
    <p class="panel-sub">Enter evidence-supported points. Leave unresearched categories blank. Blank categories are excluded from the normalised score and reduce evidence coverage; a grade is withheld until at least 60% of weighted criteria are assessed.</p>
    <div class="score-grid" id="scoreGrid"></div>
+   </div></details>
    <div class="form-actions"><button class="btn primary" type="submit" id="saveBtn">Save prospect dossier</button><button class="btn" type="button" id="resetBtn">Clear</button></div>
   </form>
   <p class="footnote">ICP weights: channels 20 · catalogue/inventory 15 · returns 15 · repair/refurbishment 15 · warehouse/fulfilment 15 · suppliers/procurement 10 · growth 5 · ExactFlow fit 5.</p>
