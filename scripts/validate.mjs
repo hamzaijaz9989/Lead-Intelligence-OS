@@ -17,7 +17,7 @@ const required = [
   "function totalScore",
   "function parseClaims",
   "function parseChannels",
-  "function parseOperations",
+  "function parseOperations",\n  "function buildResearchQueries",\n  "Assisted company research",\n  "research-links",
   'id="operations"',
   "function safeUrl",
   "function canonicalDomain",
