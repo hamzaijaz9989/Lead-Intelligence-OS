@@ -54,3 +54,7 @@ A provider failure should not erase partial evidence. Record run status and erro
 
 ## M3 — Operational intelligence capture (prototype)
 The operator records one signal per line using `AREA | FACT/HYPOTHESIS/UNKNOWN | finding | source URL`. The dossier renders each signal with its area, status and safe source link. Signals are searchable and included in CSV export. This is manual evidence capture, not automated research. Missing fields remain unknown; hypotheses must not be presented as company-confirmed facts.
+
+
+## M3 — Assisted company research pack (prototype)
+When a prospect dossier is opened, generate targeted public-web search links for official company profile, sales channels, catalogue/inventory, returns/reverse logistics, repair/refurbishment, warehouses/fulfilment, suppliers/procurement, growth/hiring and systems/technology. If a canonical company domain is known, include an official-domain-restricted search. The operator opens the links, inspects original sources, then records evidence in the existing operational signal and evidence-claim fields. Search results are discovery leads, not evidence by themselves. No search API, automatic page retrieval, scraping or AI analysis is connected in this slice.
