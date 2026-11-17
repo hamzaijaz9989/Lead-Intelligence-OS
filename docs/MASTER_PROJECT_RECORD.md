@@ -136,38 +136,35 @@ Use least privilege, secret management, minimal retention, access controls, safe
 
 ## 14. Current project status (2026-11-17)
 
-**Completed**
-- Repository `hamzaijaz9989/Lead-Intelligence-OS` is accessible and intentionally public.
-- README, Master Project Record, PRD, architecture proposal, nine agent specifications, logical data model, workflows, security/compliance baseline, milestones, decision log and changelog committed.
-- User approved Milestone 1.
-- Preliminary OpenProspector review completed; decision is not to import it into the MVP.
-- Static browser prototype committed at `index.html`.
-- Prototype supports manual company capture, business notes, source URLs, fact/hypothesis/unknown evidence claims, weighted ICP assessment, dossier view, review states, manual demo-booked flag, search/filter and CSV export.
-- Added a responsive sales dashboard with KPI cards, prospect pipeline counts, ICP grade distribution, nine-agent command-centre status cards (clearly marked not connected/manual prototype), and a one-click synthetic demo dataset loader.\n- UI refinement: discovery workspace now stacks dashboard and form/list panels at tablet/mobile/desktop-mode widths up to 1200px; optional research/evidence and ICP scoring fields are grouped in expandable sections; header identifies Milestone 2.
-- M2 implementation: added discovery stage tracking (discovered/researching/qualified/rejected), discovery source type, multi-channel map (channel URL, confirmed/likely/unverified status and optional evidence URL), discovery-stage filters and dashboard counts, canonical-domain duplicate prevention, and CSV export fields.
-- ICP scoring now distinguishes unassessed categories from zero points. It displays evidence coverage and withholds a grade/high-priority designation below 60% weighted coverage.
-- Company website input is canonicalised to a lowercase hostname with leading `www.` removed; user-entered links are restricted to HTTP(S) before rendering.
-- Added `scripts/validate.mjs` for syntax/feature checks, `scripts/test-core.mjs` for scoring/evidence helper tests, a GitHub Actions validation workflow and a GitHub Pages deployment workflow.
+**Implemented**
+- Public repository and project documentation established.
+- Static browser prototype with manual prospect capture, evidence claims, weighted ICP scoring, dossier, review states, demo flag, search and CSV export.
+- Responsive sales dashboard, synthetic demo loader and nine-role architecture preview (roles are not live agents).
+- M2 manual discovery stages, source type, multi-channel records with URLs/status/evidence, discovery filters, queue counts and CSV export.
+- Canonical-domain duplicate prevention; potential duplicates open the existing dossier rather than silently merging.
+- Validation scripts and GitHub Actions workflows.
+- Responsive refinement: dashboard and prospect workspace stack at widths up to 1200px; optional research/evidence and ICP scoring fields are expandable sections; header identifies Milestone 2.
 
-**Not yet verified / not yet built**
-- GitHub Actions validation result has not been retrieved/confirmed.
-- GitHub Pages deployment has not been retrieved/confirmed.
-- Browser-level functional testing on desktop/mobile remains outstanding, including the new dashboard and demo-data loader.
-- Automated behaviour tests for score calculations, evidence parsing, review actions and CSV export remain outstanding.
-- Live automated company discovery/search providers, operational research, the nine live agent workflows, decision-maker/contact enrichment and pipeline/follow-up management are not connected yet.
-- No backend database, secure multi-user persistence, external data provider or outbound messaging integration exists.
+**Verified**
+- M2 validation run `44004131271` on commit `80d76d1` passed.
+- M2 Pages deployment run `44004131345` on commit `80d76d1` passed.
+- Responsive refinement commit `e9ff1dd` has a validation run in progress and Pages deployment waiting as of this record update.
 
-**Current phase:** M1 dashboard and M2 manual discovery/channel workspace are deployed. M2 validation run `44004131271` on commit `80d76d1` passed; Pages deployment run `44004131345` on that commit passed. The responsive layout and expandable-form refinement are in commit `e9ff1dd`; its validation and deployment runs are pending. Repository is public by choice; use synthetic data only.
+**Not implemented / not yet verified**
+- Final responsive refinement CI and Pages deployment are pending.
+- Real-device browser acceptance is still required.
+- Live automated company discovery, external research providers, operational intelligence agents, decision-maker/contact enrichment and automated orchestration are not connected.
+- No secure backend, shared database or outbound messaging integration exists. Browser localStorage is not secure or synchronised.
+
+**Data boundary:** Repository is public and prototype records are local to the browser. Use synthetic data only; never put real prospect personal data, private notes, API keys or credentials in this prototype/repository.
 
 ## 15. Next actions
 
-1. Confirm the validation workflow passes and fix any failures.
-2. Confirm GitHub Pages deployment and provide the live app URL.
-3. Run browser-level checks for add/edit/delete, evidence links, scoring/coverage, review states, demo flag and CSV export.
-4. Improve any issues found and update this record.
-5. After M1 verification, agree the next milestone for sourced research and ExactFlow-specific pitch generation.
-
-Do not add real prospect personal data or credentials while the prototype uses browser localStorage and the repository remains public.
+1. Confirm responsive refinement validation and Pages deployment complete successfully.
+2. Test the updated dashboard on a phone and desktop-mode browser; check expandable research and ICP sections.
+3. Complete M2 browser acceptance: duplicate handling, channel status/evidence, discovery filters, counts and CSV export.
+4. Proceed to M3 operational intelligence and permitted-source research design.
+5. Only describe agents as active after their actual workflows, integrations, logs and tests are implemented.
 
 ## 16. Change-control rule
 
