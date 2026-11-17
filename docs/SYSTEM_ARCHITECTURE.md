@@ -59,3 +59,12 @@ Track run ID, agent/task, input scope, start/end, provider, request counts, retr
 
 ## M1 implementation choice — local-first prototype
 For the first vertical slice, use a static browser application with no server, no external API calls and no secrets. Persist prototype records in browser localStorage. This is suitable only for synthetic/test data and initial UX validation: data is per browser/device, can be cleared by the user/browser, is not a secure multi-user database and is not synchronised. Do not enter real prospect personal data. A secure backend and access controls are required before real-world contact dossiers or shared team use.
+
+
+## Current implementation snapshot (2026-11-17)
+- `index.html`: self-contained static application (HTML/CSS/JavaScript), no third-party runtime dependencies.
+- `scripts/validate.mjs`: checks inline JavaScript syntax and required MVP features; rejects basic network-call patterns in the local-first app script.
+- `.github/workflows/validate.yml`: runs the static validation script on pushes, pull requests and manual dispatch.
+- `.github/workflows/pages.yml`: publishes the root static site to GitHub Pages.
+- Browser localStorage is used for prototype persistence only. It is device/browser-specific, can be cleared, is not a backup, is not shared, and is not appropriate for real prospect personal data.
+- GitHub Actions and Pages execution results have not yet been verified. No browser-level test has been completed.
