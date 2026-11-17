@@ -32,7 +32,7 @@ assert.equal(claims[0].status, "FACT");
 assert.equal(claims[1].status, "HYPOTHESIS");
 console.log("Lead Intelligence OS core tests passed.");
 
-const channels = core.parseChannels("CHANNEL | Shopify | https://shop.example | CONFIRMED | https://source.example\\nCHANNEL | Amazon | https://amazon.example | MAYBE |");
+const channels = core.parseChannels("CHANNEL | Shopify | https://shop.example | CONFIRMED | https://source.example\nCHANNEL | Amazon | https://amazon.example | MAYBE |");
 assert.equal(channels.length, 2);
 assert.equal(channels[0].status, "CONFIRMED");
 assert.equal(channels[1].status, "UNVERIFIED", "unknown channel states must default to unverified");
