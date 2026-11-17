@@ -1,6 +1,6 @@
 # Development Milestones
 
-**Status:** Milestone 1 approved by the user on 2026-11-17; implementation in progress.
+**Status:** M1 implementation deployed; M2 manual discovery/channel workspace implemented; M2 automated verification pending.
 
 ## M0 — Project foundation (in progress)
 - [x] Repository accessible.
