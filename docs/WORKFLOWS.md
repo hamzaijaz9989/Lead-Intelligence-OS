@@ -51,3 +51,6 @@ Oracle analyses conversion by source, segment, geography, score band, persona, c
 
 ## Failure and retry handling
 A provider failure should not erase partial evidence. Record run status and error, preserve completed findings, retry only idempotent steps, and expose unresolved gaps. If data cannot be verified, show unavailable/unknown rather than guessing.
+
+## M3 — Operational intelligence capture (prototype)
+The operator records one signal per line using `AREA | FACT/HYPOTHESIS/UNKNOWN | finding | source URL`. The dossier renders each signal with its area, status and safe source link. Signals are searchable and included in CSV export. This is manual evidence capture, not automated research. Missing fields remain unknown; hypotheses must not be presented as company-confirmed facts.
