@@ -1,6 +1,6 @@
 # Master Project Record — Lead Intelligence OS
 
-**Status:** M1 dashboard deployed; M2 manual discovery and channel intelligence implemented, automated verification pending  
+**Status:** M1 prototype deployed; M2 manual discovery and channel intelligence implemented; responsive UI refinement in progress  
 **Version:** 1.0  
 **Last updated:** 2026-11-17  
 **Repository:** https://github.com/hamzaijaz9989/Lead-Intelligence-OS  
@@ -143,7 +143,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - Preliminary OpenProspector review completed; decision is not to import it into the MVP.
 - Static browser prototype committed at `index.html`.
 - Prototype supports manual company capture, business notes, source URLs, fact/hypothesis/unknown evidence claims, weighted ICP assessment, dossier view, review states, manual demo-booked flag, search/filter and CSV export.
-- Added a responsive sales dashboard with KPI cards, prospect pipeline counts, ICP grade distribution, nine-agent command-centre status cards (clearly marked not connected/manual prototype), and a one-click synthetic demo dataset loader.
+- Added a responsive sales dashboard with KPI cards, prospect pipeline counts, ICP grade distribution, nine-agent command-centre status cards (clearly marked not connected/manual prototype), and a one-click synthetic demo dataset loader.\n- UI refinement: discovery workspace now stacks dashboard and form/list panels at tablet/mobile/desktop-mode widths up to 1200px; optional research/evidence and ICP scoring fields are grouped in expandable sections; header identifies Milestone 2.
 - M2 implementation: added discovery stage tracking (discovered/researching/qualified/rejected), discovery source type, multi-channel map (channel URL, confirmed/likely/unverified status and optional evidence URL), discovery-stage filters and dashboard counts, canonical-domain duplicate prevention, and CSV export fields.
 - ICP scoring now distinguishes unassessed categories from zero points. It displays evidence coverage and withholds a grade/high-priority designation below 60% weighted coverage.
 - Company website input is canonicalised to a lowercase hostname with leading `www.` removed; user-entered links are restricted to HTTP(S) before rendering.
@@ -157,7 +157,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - Live automated company discovery/search providers, operational research, the nine live agent workflows, decision-maker/contact enrichment and pipeline/follow-up management are not connected yet.
 - No backend database, secure multi-user persistence, external data provider or outbound messaging integration exists.
 
-**Current phase:** M1 dashboard and Pages deployment succeeded. M2 manual discovery and channel intelligence are implemented in `index.html` (latest UI feature commit `022f5e7`), with tests and validation scripts updated. M2 GitHub Actions verification is pending. Pages deployment workflow is configured for automatic deploys on `index.html` changes. Repository is public by choice; use synthetic data only.
+**Current phase:** M1 dashboard and M2 manual discovery/channel workspace are deployed. M2 validation run `44004131271` on commit `80d76d1` passed; Pages deployment run `44004131345` on that commit passed. The responsive layout and expandable-form refinement are in commit `e9ff1dd`; its validation and deployment runs are pending. Repository is public by choice; use synthetic data only.
 
 ## 15. Next actions
 
