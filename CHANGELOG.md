@@ -55,3 +55,11 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Added Node assertions for ICP scoring/coverage, grade gating, safe URL handling, canonical domain normalisation and evidence claim parsing.
 - Updated the validation workflow to run the helper tests after inline JavaScript syntax/feature validation.
 - GitHub Actions result remains unconfirmed; no success is claimed until the run is observed.
+
+
+## 2026-11-17 — GitHub Pages enablement fix
+- Inspected the failed GitHub Pages deployment run (#7, commit `c691eb6`): checkout succeeded, but `actions/configure-pages@v5` failed with `Get Pages site failed: Not Found`; upload and deployment steps were skipped.
+- Confirmed the repository Pages settings screen already has **GitHub Actions** selected as the source.
+- Updated `.github/workflows/pages.yml` to pass `enablement: true` to `actions/configure-pages@v5`, allowing the action to enable the Pages site when it has not yet been created.
+- Commit: `0e0b9d7`.
+- Latest validation run #25 on `c691eb6` passed, including core helper tests. The new Pages deployment outcome remains pending; do not claim the app is live until verified.
