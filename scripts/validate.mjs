@@ -17,6 +17,8 @@ const required = [
   "function totalScore",
   "function parseClaims",
   "function parseChannels",
+  "function parseOperations",
+  'id="operations"',
   "function safeUrl",
   "function canonicalDomain",
   "data-stage",
