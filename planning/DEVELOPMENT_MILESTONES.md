@@ -10,28 +10,34 @@
 **Exit:** product baseline documented and M1 approved; M0 closeout pending first vertical-slice verification.
 
 ## M1 — Safe foundation evaluation + thin vertical slice (approved)
-Goal: prove one complete, auditable path from a candidate company to a reviewed prospect dossier without sending outreach.
 
-Approved work:
-1. Inspect candidate starter repositories and dependencies; compare license, maintenance, architecture, scripts, permissions, secrets, data flows and security concerns.
-6. Select a future backend foundation only after further review.
-7. Establish future secure persistence and data model.
-8. Extend manual company entry/import and source evidence capture.
-9. Add structured research notes with fact/hypothesis/unknown status.
-10. Implement explainable ICP scoring and evidence coverage.
-11. Render a basic dossier and human review state.
-12. Add run/change logs and expanded tests.
+**Goal:** prove a safe, auditable company-to-dossier workflow without sending outreach.
 
-Acceptance criteria:
-- A company can be created with canonical domain, country and source.
-- At least one evidence item can be attached to a claim.
-- Facts and hypotheses render distinctly.
-- Score and rationale are visible and reproducible.
-- Dossier can be approved/rejected/marked incomplete.
-- No outbound sending or calling capability exists.
-- Browser-only prototype clearly states data is stored locally in the current browser and is not a secure shared database.
-- Public repository contains no credentials or real prospect personal data.
-- Secrets are not committed; tests/build pass; limitations documented.
+**Implemented**
+- [x] Preliminary review of OpenProspector; no import/adoption for the MVP.
+- [x] Static browser workspace at repository root.
+- [x] Manual company capture and business context.
+- [x] Source URL and structured FACT / HYPOTHESIS / UNKNOWN claims.
+- [x] Weighted ICP criteria with unassessed categories left blank.
+- [x] Normalised score, evidence coverage and grade withheld below 60% coverage.
+- [x] Dossier view and human review states (approve, incomplete, reject).
+- [x] Manual demo-booked flag and CSV export.
+- [x] HTTP(S)-only links for user-entered website and evidence URLs.
+- [x] Static validation script and GitHub Actions workflow added.
+- [x] GitHub Pages deployment workflow added.
+
+**Pending verification**
+- [ ] Confirm GitHub Actions validation workflow passes.
+- [ ] Confirm GitHub Pages deployment succeeds.
+- [ ] Test add/edit/delete, scoring, evidence links, review states, demo flag and CSV export in a real browser.
+- [ ] Test responsive layout on desktop and mobile.
+- [ ] Fix defects and record test evidence.
+
+**Acceptance boundary**
+- The prototype is local-only and uses browser localStorage; it is not a secure shared database.
+- Use synthetic/test data only. Do not enter real prospect personal data or credentials.
+- No outbound sending, calling, scraping or live enrichment provider is enabled.
+- M1 is not complete until automated and browser verification are recorded.
 
 ## M2 — Company discovery and channel intelligence
 Permitted-source discovery, entity resolution, deduplication and channel mapping.
