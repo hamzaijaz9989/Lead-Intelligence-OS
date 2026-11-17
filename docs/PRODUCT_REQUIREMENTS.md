@@ -98,3 +98,7 @@ Maximise qualified ExactFlow demos booked by helping a human B2B sales operator 
 - Guaranteed personal mobile/email discovery.
 - Autonomous CRM write access.
 - Complex multi-agent microservice infrastructure.
+
+
+## Prototype status
+The initial static workspace supports manual company capture, source/evidence claims, fact/hypothesis/unknown classification, weighted ICP assessment with evidence coverage, dossier review states, manual demo-booked tracking and CSV export. It is a prototype using localStorage, not a secure CRM or automated research/enrichment system. The user must use synthetic/test data only until secure backend storage and access controls are implemented.
