@@ -14,7 +14,7 @@ const coreSource = [
   between("function assessment", "function toast"),
   between("function parseChannels", "function clearForm")
 ].join("\n");
-const core = new Function(coreSource + "\nreturn { assessment, grade, safeUrl, canonicalDomain, parseClaims, parseChannels };")();
+const core = new Function(coreSource + "\nreturn { assessment, grade, safeUrl, canonicalDomain, parseClaims, parseChannels, parseOperations };")();
 
 assert.equal(core.assessment({}).coverage, 0, "blank criteria should have zero evidence coverage");
 assert.equal(core.grade(100, 0), "Unrated", "no evidence must not receive a grade");
@@ -38,3 +38,11 @@ assert.equal(channels[0].status, "CONFIRMED");
 assert.equal(channels[1].status, "UNVERIFIED", "unknown channel states must default to unverified");
 assert.equal(channels[1].name, "Amazon");
 console.log("Discovery and channel mapping tests passed.");
+
+const operations = core.parseOperations("inventory | FACT | Three warehouse locations | https://source.example\\nreturns | HYPOTHESIS | Returns may need inspection |");
+assert.equal(operations.length, 2);
+assert.equal(operations[0].area, "inventory");
+assert.equal(operations[0].status, "FACT");
+assert.equal(operations[1].status, "HYPOTHESIS");
+assert.equal(operations[1].url, "");
+console.log("Operational intelligence parsing tests passed.");
