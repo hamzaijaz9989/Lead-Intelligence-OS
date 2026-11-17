@@ -11,6 +11,10 @@ The primary business outcome is to maximise qualified ExactFlow demos booked. Th
 - No application code or integrations implemented yet.
 - Current phase: planning baseline and first milestone definition.
 
+## Prototype
+
+A first local-first prototype is available at the repository root (`index.html`). Once the GitHub Pages workflow succeeds, it should be available at `https://hamzaijaz9989.github.io/Lead-Intelligence-OS/`. It stores test records only in the current browser's localStorage. Use synthetic data only; this is not secure shared storage.
+
 ## Start here
 
 1. [Master Project Record](docs/MASTER_PROJECT_RECORD.md) — authoritative goal, scope, status and operating rules.
