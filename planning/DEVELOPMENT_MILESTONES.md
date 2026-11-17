@@ -1,6 +1,6 @@
 # Development Milestones
 
-**Status:** M1 implementation deployed; M2 manual discovery/channel workspace implemented; M2 automated verification pending.
+**Status:** M1 and M2 core implementations deployed; responsive UI refinement in progress and final verification pending.
 
 ## M0 — Project foundation (in progress)
 - [x] Repository accessible.
