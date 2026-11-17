@@ -153,3 +153,5 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Safety boundary: only public professional/business routes; no private personal contact data. Public availability and technical verification are not marketing permission. Synthetic data only until secure storage is implemented.
 
 - Updated the dashboard milestone indicator to M4 · Contact Intelligence; UI commit: `b28f249`. Validation and Pages deployment are being checked.
+
+- M4 contact intelligence UI commit `b28f249` passed GitHub Actions validation run `44005741077` and GitHub Pages deployment run `44005741119`. Contact parsing, app syntax and deployment steps succeeded. Browser-level acceptance remains pending.
