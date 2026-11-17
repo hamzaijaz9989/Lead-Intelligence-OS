@@ -14,7 +14,7 @@ const coreSource = [
   between("function assessment", "function toast"),
   between("function buildResearchQueries", "function parseChannels"),\n  between("function parseChannels", "function clearForm")
 ].join("\n");
-const core = new Function(coreSource + "\nreturn { assessment, grade, safeUrl, canonicalDomain, parseClaims, parseChannels, parseOperations, buildResearchQueries };")();
+const core = new Function(coreSource + "\nreturn { assessment, grade, safeUrl, canonicalDomain, parseClaims, parseChannels, parseOperations, parseContacts, buildResearchQueries };")();
 
 assert.equal(core.assessment({}).coverage, 0, "blank criteria should have zero evidence coverage");
 assert.equal(core.grade(100, 0), "Unrated", "no evidence must not receive a grade");
@@ -55,3 +55,12 @@ assert.ok(research.some(x => x.query.includes("site:example.com")), "official-do
 assert.ok(research.every(x => x.url.startsWith("https://www.google.com/search?q=")), "search links must be encoded HTTPS Google searches");
 assert.ok(research.some(x => decodeURIComponent(x.url).includes("warehouse fulfilment")), "warehouse research query should be present");
 console.log("Assisted company research tests passed.");
+
+const contacts = core.parseContacts("CONTACT | Jane Smith | Head of Operations | jane@company.com | +44 20 1234 5678 | SWITCHBOARD | https://linkedin.com/in/jane | https://company.com/team | VERIFIED\\nCONTACT | Alex Lee | Founder | | +1 212 555 0100 | UNKNOWN | | | MAYBE");
+assert.equal(contacts.length, 2);
+assert.equal(contacts[0].phoneType, "SWITCHBOARD");
+assert.equal(contacts[0].verification, "VERIFIED");
+assert.equal(contacts[1].phoneType, "UNKNOWN");
+assert.equal(contacts[1].verification, "UNVERIFIED");
+assert.equal(contacts[1].name, "Alex Lee");
+console.log("Professional contact intelligence tests passed.");
