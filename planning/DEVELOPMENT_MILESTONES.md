@@ -24,12 +24,12 @@
 - [x] Manual demo-booked flag and CSV export.
 - [x] Canonicalise company website hostname and restrict rendered website/evidence links to HTTP(S).
 - [x] Static validation script, core helper tests and GitHub Actions workflow added.
-- [x] GitHub Pages deployment workflow added.
+- [x] GitHub Pages deployment workflow added and successful deployment run verified.\n- [x] Responsive sales dashboard added with KPI cards, pipeline stages, ICP grade distribution and nine-agent status preview.\n- [x] Synthetic demo dataset loader added for safe UI testing.
 
 **Pending verification**
 - [ ] Confirm GitHub Actions validation workflow passes.
 - [ ] Confirm GitHub Pages deployment succeeds.
-- [ ] Test add/edit/delete, scoring, evidence links, review states, demo flag and CSV export in a real browser.
+- [ ] Test dashboard, synthetic demo-data loading, add/edit/delete, scoring, evidence links, review states, demo flag and CSV export in a real browser.
 - [ ] Test responsive layout on desktop and mobile.
 - [ ] Fix defects and record test evidence.
 
