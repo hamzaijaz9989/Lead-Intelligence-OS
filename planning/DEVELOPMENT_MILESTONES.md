@@ -5,9 +5,9 @@
 ## M0 — Project foundation (in progress)
 - [x] Repository accessible.
 - [x] README and Master Project Record committed.
-- [ ] Complete and review supporting specifications.
+- [x] Commit supporting specifications and decision log.
 - [ ] Agree Milestone 1 scope and acceptance criteria.
-**Exit:** documented product baseline, repository hygiene and approved first build target.
+**Exit:** product baseline and repository hygiene are documented; first build target still requires user agreement.
 
 ## M1 — Safe foundation evaluation + thin vertical slice (proposed)
 Goal: prove one complete, auditable path from a candidate company to a reviewed prospect dossier without sending outreach.
