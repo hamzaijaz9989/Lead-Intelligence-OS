@@ -24,6 +24,10 @@ The primary business outcome is to maximise qualified ExactFlow demos booked. Th
 9. [Decision Log](planning/DECISIONS.md) — decisions and rationale.
 10. [Changelog](CHANGELOG.md) — meaningful project changes.
 
+## Repository visibility and data handling
+
+This repository is intentionally **public**. Never commit API keys, credentials, private prospect data or real personal contact details. The initial browser prototype uses local browser storage and is for synthetic/test data only; it is not a secure shared database.
+
 ## Non-negotiable principles
 
 - Demo bookings are the north-star outcome; lead volume alone is not success.
