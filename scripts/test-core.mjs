@@ -39,7 +39,7 @@ assert.equal(channels[1].status, "UNVERIFIED", "unknown channel states must defa
 assert.equal(channels[1].name, "Amazon");
 console.log("Discovery and channel mapping tests passed.");
 
-const operations = core.parseOperations("inventory | FACT | Three warehouse locations | https://source.example\\nreturns | HYPOTHESIS | Returns may need inspection |");
+const operations = core.parseOperations("inventory | FACT | Three warehouse locations | https://source.example\nreturns | HYPOTHESIS | Returns may need inspection |");
 assert.equal(operations.length, 2);
 assert.equal(operations[0].area, "inventory");
 assert.equal(operations[0].status, "FACT");
