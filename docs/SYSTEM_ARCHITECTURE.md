@@ -70,3 +70,5 @@ For the first vertical slice, use a static browser application with no server, n
 - GitHub Actions and Pages execution results have not yet been verified. No browser-level test has been completed.
 
 The prototype normalises valid website input to a lowercase hostname and strips a leading `www.` before storing it as the company domain.
+
+- `scripts/test-core.mjs`: Node assertions for unknown-vs-zero scoring, weighted coverage, grade gating, safe URL protocols, canonical domain normalisation and evidence-claim parsing. The tests are configured in the validation workflow but have not yet been observed passing in GitHub Actions.
