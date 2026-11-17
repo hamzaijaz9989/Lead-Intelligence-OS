@@ -23,7 +23,7 @@
 - [x] Dossier view and human review states (approve, incomplete, reject).
 - [x] Manual demo-booked flag and CSV export.
 - [x] Canonicalise company website hostname and restrict rendered website/evidence links to HTTP(S).
-- [x] Static validation script and GitHub Actions workflow added.
+- [x] Static validation script, core helper tests and GitHub Actions workflow added.
 - [x] GitHub Pages deployment workflow added.
 
 **Pending verification**
