@@ -66,7 +66,7 @@ Live automated company discovery/provider integrations are not yet implemented; 
 - [x] Static validation passed on feature commit `906cb6a` (run `44004662360`).
 - [ ] Verify latest core-test run and Pages deployment after parser-test updates.
 - [ ] Browser-test operational signal entry, edit persistence, dossier rendering, search and CSV export.
-- [ ] Build permitted-source automated research only after source/provider terms and provenance are designed.
+- [x] Generate targeted public-web research links per dossier for company profile, channels, inventory, returns, repair, warehouses, suppliers, growth and systems.\n- [x] Add official-domain-restricted query when company domain is known.\n- [x] Add tests for research query coverage and HTTPS search URL generation.\n- [ ] Browser-test query links on mobile and desktop.\n- [ ] Build permitted-source automated research only after source/provider terms and provenance are designed.
 
 ## M4 — Decision-maker and contact intelligence
 People, phone/email/social routes, source provenance, verification and channel eligibility.
