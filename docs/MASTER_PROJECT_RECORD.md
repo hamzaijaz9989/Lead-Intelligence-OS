@@ -139,9 +139,9 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - Private GitHub repository found and verified accessible: `hamzaijaz9989/Lead-Intelligence-OS`.
 - Initial README committed.
 - Product north-star and planning baseline captured in this record.
+- Supporting documentation committed: product requirements, architecture proposal, nine agent specifications, logical data model, workflows, security/compliance baseline, milestones, decision log and changelog.
 
 **Not yet done**
-- Remaining supporting documentation files.
 - Audit of candidate starter repositories and data providers.
 - Agreement on Milestone 1 acceptance criteria.
 - No application code, dependencies, agents, database, integrations or deployment have been implemented.
@@ -150,9 +150,9 @@ Use least privilege, secret management, minimal retention, access controls, safe
 
 ## 15. Next actions
 
-1. Complete the supporting planning documents and link them from README.
-2. Inspect the repository state and maintain this record as source of truth.
-3. Propose Milestone 1: safe foundation evaluation and a thin vertical slice proving discovery → evidence capture → qualification → dossier/review.
+1. Review the committed planning baseline for accuracy.
+2. Audit candidate starter repositories and data providers; do not install before review and approval.
+3. Agree Milestone 1: safe foundation evaluation and a thin vertical slice proving discovery → evidence capture → qualification → dossier/review.
 4. Agree acceptance criteria with the user before implementation.
 5. Implement only the agreed milestone, test it, and update this record/changelog after each meaningful change.
 
