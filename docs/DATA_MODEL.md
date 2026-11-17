@@ -39,3 +39,7 @@ Company 1:N aliases, channels, operational signals, people, contacts, evidence, 
 
 ## Operational intelligence records (prototype)
 Each company may hold an array of operational signal records: `area`, `status` (FACT/HYPOTHESIS/UNKNOWN), `finding`, and optional `url`. Signals are stored inside the local browser company record as an `operations` array. A future backend should normalise these into an OperationalSignals table with source IDs, capture dates, confidence and last-checked timestamps. Do not treat hypotheses as verified facts.
+
+
+## Assisted research (prototype)
+Research query links are generated at dossier-render time from company name, country and canonical domain. They are not persisted as evidence. The operator must independently inspect each source and create an operational signal or evidence claim with the source URL. A future research_runs table should record query, provider, run time, result URLs, retrieval time, status, cost and errors; a future evidence_sources table should store source provenance and excerpts. Never treat a search-result snippet or generated query as a verified company fact.
