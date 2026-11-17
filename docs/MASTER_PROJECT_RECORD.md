@@ -1,6 +1,6 @@
 # Master Project Record — Lead Intelligence OS
 
-**Status:** M1 prototype deployed; M2 manual discovery and channel intelligence implemented; M3 assisted research pack implemented; automated provider research not connected  
+**Status:** M1 prototype deployed; M2 manual discovery and channel intelligence implemented; M3 assisted research pack implemented; M4 manual contact intelligence implemented; automated provider research not connected  
 **Version:** 1.0  
 **Last updated:** 2026-11-17  
 **Repository:** https://github.com/hamzaijaz9989/Lead-Intelligence-OS  
@@ -143,7 +143,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - M2 manual discovery stages, source type, multi-channel records with URLs/status/evidence, discovery filters, queue counts and CSV export.
 - Canonical-domain duplicate prevention; potential duplicates open the existing dossier rather than silently merging.
 - Validation scripts and GitHub Actions workflows.
-- Responsive refinement: dashboard and prospect workspace stack at widths up to 1200px; optional research/evidence and ICP scoring fields are expandable sections; header identifies the current milestone.\n- M3 assisted research pack: each prospect dossier generates public-web search links for company profile, channels, catalogue/inventory, returns, repair/refurbishment, warehouse/fulfilment, suppliers/procurement, growth/hiring and systems; adds official-domain query when available. Operator must inspect sources and manually record evidence.
+- Responsive refinement: dashboard and prospect workspace stack at widths up to 1200px; optional research/evidence and ICP scoring fields are expandable sections; header identifies the current milestone.\n- M4 manual contact intelligence: capture public professional names/roles, business email, published business phone, phone type, profile/source URLs and verified/unverified status; dossier display and CSV export added. No automated contact enrichment is connected.\n- M3 assisted research pack: each prospect dossier generates public-web search links for company profile, channels, catalogue/inventory, returns, repair/refurbishment, warehouse/fulfilment, suppliers/procurement, growth/hiring and systems; adds official-domain query when available. Operator must inspect sources and manually record evidence.
 
 **Verified**
 - M2 validation run `44004131271` on commit `80d76d1` passed.
