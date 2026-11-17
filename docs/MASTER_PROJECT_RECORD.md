@@ -148,7 +148,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 **Verified**
 - M2 validation run `44004131271` on commit `80d76d1` passed.
 - M2 Pages deployment run `44004131345` on commit `80d76d1` passed.
-- Responsive refinement commit `e9ff1dd` has a validation run in progress and Pages deployment waiting as of this record update.
+- Responsive refinement commit `e9ff1dd` passed validation run `44004473156` and Pages deployment run `44004473184`.
 
 **Not implemented / not yet verified**
 - Final responsive refinement CI and Pages deployment are pending.
