@@ -42,7 +42,20 @@
 - M1 is not complete until automated and browser verification are recorded.
 
 ## M2 — Company discovery and channel intelligence
-Permitted-source discovery, entity resolution, deduplication and channel mapping.
+
+**Implemented**
+- [x] Manual candidate capture and discovery lifecycle (discovered/researching/qualified/rejected).
+- [x] Discovery source type and source URL.
+- [x] Multi-channel mapping with channel URL, confidence status and optional evidence source.
+- [x] Canonical-domain duplicate prevention; no silent merge.
+- [x] Discovery filters, dashboard counts and CSV export.
+- [x] Validation run `44004131271` on `80d76d1` passed.
+- [x] Pages deployment run `44004131345` on `80d76d1` passed.
+- [x] Responsive stacking and expandable research/ICP sections implemented in `e9ff1dd`.
+- [ ] Verify final responsive refinement validation and Pages deployment.
+- [ ] Browser-test phone/desktop-mode layouts, expandable sections, duplicate handling, channel evidence, filters and CSV export.
+
+Live automated company discovery/provider integrations are not yet implemented; research entry remains manual in this increment.
 
 ## M3 — Operational intelligence
 Research and evidence for inventory, catalogue, returns, repair/refurbishment, warehouses, fulfilment and procurement.
