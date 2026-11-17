@@ -108,3 +108,11 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Validation and Pages deployment for the latest responsive refinement are pending; do not mark browser acceptance complete until tested on a phone.
 
 - Responsive refinement commit `e9ff1dd` passed GitHub Actions validation run `44004473156` and GitHub Pages deployment run `44004473184`; mobile browser acceptance remains to be performed by the user.
+
+## 2026-11-17 — M3 initial operational intelligence capture
+- Added structured operational signals using `AREA | FACT/HYPOTHESIS/UNKNOWN | finding | source URL`.
+- Signals can cover catalogue, inventory, returns, repair, warehouse, fulfilment, procurement, systems and growth.
+- Signals are stored per prospect, restored when editing, shown in the dossier, included in search and exported to CSV.
+- Added parser validation and core tests for area, status and optional evidence URL.
+- Updated PRD, data model, workflows, Master Project Record and milestone tracker.
+- Initial feature commit `42dd282` had an inline parser line-break defect; corrected in `906cb6a`. Validation passed on `906cb6a` (run `44004662360`). The latest helper-test run and Pages deployment are being checked separately.
