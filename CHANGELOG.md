@@ -94,3 +94,5 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Corrected the channel parser unit test to use actual newline-separated records.
 - GitHub Actions validation run `44004008781` on commit `eafa341` passed both application syntax/feature validation and core helper tests, including channel status parsing.
 - - GitHub Pages deployment run `44003986328` for UI commit `47e9d3a` passed Configure Pages, Upload static site and Deploy to Pages.
+
+- Follow-up UI refinement: added a dedicated Discovery rejected filter (separate from the dossier review rejection state) and included channel URLs plus evidence-source URLs in CSV exports. Commit: `80d76d1`.
