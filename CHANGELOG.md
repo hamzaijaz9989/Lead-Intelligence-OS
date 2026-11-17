@@ -11,3 +11,8 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Recorded manual-outbound-only MVP and evidence/provenance requirements.
 - No application code, dependencies, provider integrations or deployment added.
 - Next: review documentation and agree Milestone 1 before implementation.
+
+## 2026-11-17 — Documentation baseline verified
+- Verified the Master Project Record and proposed milestone file after initial documentation commits.
+- Updated project status to reflect that the supporting specifications are now committed.
+- M0 remains in progress until the user reviews the baseline and approves M1 acceptance criteria.
