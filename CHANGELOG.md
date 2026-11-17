@@ -50,3 +50,8 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Normalised valid website inputs to lowercase hostnames and removed a leading `www.` for consistent company identity capture.
 - Extended the static validation script to check the canonical-domain helper is present.
 - Validation workflow result and browser behaviour remain unverified.
+
+## 2026-11-17 — Core helper tests added
+- Added Node assertions for ICP scoring/coverage, grade gating, safe URL handling, canonical domain normalisation and evidence claim parsing.
+- Updated the validation workflow to run the helper tests after inline JavaScript syntax/feature validation.
+- GitHub Actions result remains unconfirmed; no success is claimed until the run is observed.
