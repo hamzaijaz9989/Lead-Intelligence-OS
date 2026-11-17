@@ -96,3 +96,13 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - - GitHub Pages deployment run `44003986328` for UI commit `47e9d3a` passed Configure Pages, Upload static site and Deploy to Pages.
 
 - Follow-up UI refinement: added a dedicated Discovery rejected filter (separate from the dossier review rejection state) and included channel URLs plus evidence-source URLs in CSV exports. Commit: `80d76d1`.
+
+
+## 2026-11-17 — Responsive workspace refinement
+- Changed the discovery dashboard to a cleaner single-column flow at tablet, mobile and narrow desktop-mode widths (up to 1200px), avoiding cramped side-by-side panels on phone browsers.
+- Improved mobile spacing, metric cards, agent cards, grade cards, search controls and prospect cards.
+- Grouped optional channel mapping, products, source notes and evidence claims into an expandable “Research profile, channels & evidence” section.
+- Grouped ICP criteria into a separate expandable “ICP scoring & qualification” section so quick company capture is less overwhelming.
+- Updated the header milestone label to “Milestone 2 · Discovery Workspace”.
+- Responsive layout commit: `82500b2`; expandable form sections commit: `e9ff1dd`.
+- Validation and Pages deployment for the latest responsive refinement are pending; do not mark browser acceptance complete until tested on a phone.
