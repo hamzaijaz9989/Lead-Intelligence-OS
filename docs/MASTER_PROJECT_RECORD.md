@@ -1,10 +1,10 @@
 # Master Project Record — Lead Intelligence OS
 
-**Status:** Planning baseline established; implementation not started  
+**Status:** Milestone 1 approved; first implementation in progress  
 **Version:** 1.0  
 **Last updated:** 2026-11-17  
 **Repository:** https://github.com/hamzaijaz9989/Lead-Intelligence-OS  
-**Visibility check:** GitHub currently reports this repository as **public**, although the intended setting was private. Change it to private before adding credentials, prospect personal data or other sensitive information.
+**Visibility:** Public by deliberate user choice (confirmed 2026-11-17). Do not commit API keys, credentials or real prospect personal data; keep such data in an appropriately secured private runtime/storage.
 
 ## 1. North-star objective
 
@@ -138,25 +138,30 @@ Use least privilege, secret management, minimal retention, access controls, safe
 
 **Completed**
 - GitHub repository found and verified accessible: `hamzaijaz9989/Lead-Intelligence-OS`.
-- Visibility verified as **public**; this conflicts with the intended private setting and must be corrected by the repository owner before sensitive data or credentials are added.
+- Visibility verified as **public** and confirmed intentional by the user. Repository is public; no secrets or real prospect contact data may be committed.
 - Initial README committed.
 - Product north-star and planning baseline captured in this record.
 - Supporting documentation committed: product requirements, architecture proposal, nine agent specifications, logical data model, workflows, security/compliance baseline, milestones, decision log and changelog.
 
-**Not yet done**
-- Audit of candidate starter repositories and data providers.
-- Agreement on Milestone 1 acceptance criteria.
-- No application code, dependencies, agents, database, integrations or deployment have been implemented.
+**Completed since foundation**
+- User confirmed public repository visibility is intentional.
+- User approved Milestone 1 scope.
+- Preliminary review of OpenProspector completed; it is not being adopted as the MVP base at this stage.
 
-**Current phase:** Foundation documentation and milestone definition; repository visibility correction required before sensitive data is added.
+**Not yet done**
+- Implement and verify the first working prospect dossier slice.
+- Test locally and verify GitHub Pages deployment.
+- No live enrichment providers or automated agents are connected yet.
+
+**Current phase:** Milestone 1 implementation — local-first prospect dossier vertical slice. Repository is public by choice.
 
 ## 15. Next actions
 
 1. Review the committed planning baseline for accuracy.
 2. Audit candidate starter repositories and data providers; do not install before review and approval.
-3. Agree Milestone 1: safe foundation evaluation and a thin vertical slice proving discovery → evidence capture → qualification → dossier/review.
-4. Agree acceptance criteria with the user before implementation.
-5. Implement only the agreed milestone, test it, and update this record/changelog after each meaningful change.
+3. Implement the approved local-first vertical slice: manual company entry → sourced evidence → explainable ICP score → dossier → human review.
+4. Verify behaviour and document local-only storage limitations.
+5. Add a static GitHub Pages deployment workflow; verify deployment after GitHub Actions runs.
 
 ## 16. Change-control rule
 
