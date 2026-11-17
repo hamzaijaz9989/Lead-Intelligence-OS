@@ -142,7 +142,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - User approved Milestone 1.
 - Preliminary OpenProspector review completed; decision is not to import it into the MVP.
 - Static browser prototype committed at `index.html`.
-- Prototype supports manual company capture, business notes, source URLs, fact/hypothesis/unknown evidence claims, weighted ICP assessment, dossier view, review states, manual demo-booked flag, search/filter and CSV export.
+- Prototype supports manual company capture, business notes, source URLs, fact/hypothesis/unknown evidence claims, weighted ICP assessment, dossier view, review states, manual demo-booked flag, search/filter and CSV export.\n- Added a responsive sales dashboard with KPI cards, prospect pipeline counts, ICP grade distribution, nine-agent command-centre status cards (clearly marked not connected/manual prototype), and a one-click synthetic demo dataset loader.
 - ICP scoring now distinguishes unassessed categories from zero points. It displays evidence coverage and withholds a grade/high-priority designation below 60% weighted coverage.
 - Company website input is canonicalised to a lowercase hostname with leading `www.` removed; user-entered links are restricted to HTTP(S) before rendering.
 - Added `scripts/validate.mjs` for syntax/feature checks, `scripts/test-core.mjs` for scoring/evidence helper tests, a GitHub Actions validation workflow and a GitHub Pages deployment workflow.
@@ -150,7 +150,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 **Not yet verified / not yet built**
 - GitHub Actions validation result has not been retrieved/confirmed.
 - GitHub Pages deployment has not been retrieved/confirmed.
-- Browser-level functional testing on desktop/mobile remains outstanding.
+- Browser-level functional testing on desktop/mobile remains outstanding, including the new dashboard and demo-data loader.
 - Automated behaviour tests for score calculations, evidence parsing, review actions and CSV export remain outstanding.
 - ExactFlow capability mapping, assisted web research, the nine live agent workflows, decision-maker/contact enrichment and pipeline/follow-up management are not connected yet.
 - No backend database, secure multi-user persistence, external data provider or outbound messaging integration exists.
