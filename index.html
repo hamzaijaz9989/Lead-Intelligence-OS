@@ -119,6 +119,12 @@ body{background:radial-gradient(ellipse at 12% -12%,#1b3152 0,transparent 42%),l
 }
 @media(max-width:380px){.two{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.top-actions .pill{display:none}}
 
+
+.research-links{display:grid;gap:8px;margin-top:10px}
+.research-link{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 11px;border:1px solid #2b3e58;border-radius:9px;background:#101d2f}
+.research-link strong{display:block;font-size:11px;color:#e5eef9}.research-link small{display:block;font-size:9px;color:#9aacc2;margin-top:4px;line-height:1.4;overflow-wrap:anywhere}
+.research-link .btn{flex:0 0 auto}
+
 </style>
 </head>
 <body>
@@ -237,6 +243,24 @@ function makeId(){return "p_"+Date.now().toString(36)+"_"+Math.random().toString
 function buildScoreInputs(){ $("scoreGrid").innerHTML=categories.map(c=>'<div class="score-item"><label for="s_'+c.key+'">'+esc(c.label)+' <span class="max">/ '+c.max+'</span></label><input type="number" min="0" max="'+c.max+'" step="1" placeholder="Not assessed" value="" id="s_'+c.key+'" data-score="'+c.key+'"></div>').join(""); $("scoreGrid").addEventListener("input",updateScore); }
 function getScores(){const o={};categories.forEach(c=>{const v=$("s_"+c.key).value;o[c.key]=v===""?null:Math.min(c.max,Math.max(0,Number(v)||0))});return o}
 function updateScore(){const a=assessment(getScores());$("scoreTotal").textContent=a.normalized+" / 100 · "+a.coverage+"% assessed";}
+
+function buildResearchQueries(company,country,website){
+ const subject=[String(company||"").trim(),String(country||"").trim()].filter(Boolean).join(" ");
+ const domain=canonicalDomain(website||"");
+ const topics=[
+  ["Official company profile",'"'+subject+'" official website about company'],
+  ["Sales channels",'"'+subject+'" Shopify Amazon eBay marketplace store'],
+  ["Catalogue and inventory",'"'+subject+'" products SKU catalogue inventory stock'],
+  ["Returns and reverse logistics",'"'+subject+'" returns policy exchanges reverse logistics'],
+  ["Repair and refurbishment",'"'+subject+'" repair refurbishment testing grading'],
+  ["Warehouses and fulfilment",'"'+subject+'" warehouse fulfilment distribution centre 3PL'],
+  ["Suppliers and procurement",'"'+subject+'" suppliers procurement purchasing sourcing'],
+  ["Growth and hiring signals",'"'+subject+'" expansion hiring operations warehouse ecommerce'],
+  ["Systems and technology",'"'+subject+'" ecommerce platform ERP inventory software']
+ ];
+ if(domain)topics.push(["Official-domain evidence",'site:'+domain+' (returns OR shipping OR warehouse OR repair OR inventory OR supplier)']);
+ return topics.map(([label,query])=>({label,query,url:"https://www.google.com/search?q="+encodeURIComponent(query)}));
+}
 function parseChannels(raw){return raw.split("\n").map(line=>line.trim()).filter(Boolean).map(line=>{const p=line.split("|").map(x=>x.trim());const state=(p[3]||"UNVERIFIED").toUpperCase();return{name:p[1]||"",url:p[2]||"",status:["CONFIRMED","LIKELY","UNVERIFIED"].includes(state)?state:"UNVERIFIED",sourceUrl:p[4]||""}}).filter(x=>x.name)}
 function parseOperations(raw){return raw.split("\n").map(line=>line.trim()).filter(Boolean).map(line=>{const p=line.split("|").map(x=>x.trim());const status=(p[1]||"UNKNOWN").toUpperCase();return{area:p[0]||"Other",status:["FACT","HYPOTHESIS","UNKNOWN"].includes(status)?status:"UNKNOWN",finding:p[2]||"",url:p[3]||""}}).filter(x=>x.finding)}
 function parseClaims(raw){return raw.split("\n").map(line=>line.trim()).filter(Boolean).map(line=>{const parts=line.split("|").map(x=>x.trim());let status=(parts[0]||"UNKNOWN").toUpperCase();if(!["FACT","HYPOTHESIS","UNKNOWN"].includes(status))status="UNKNOWN";return{status,claim:parts[1]||parts[0]||"",url:parts[2]||""}}).filter(x=>x.claim)}
