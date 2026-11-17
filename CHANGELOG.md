@@ -63,3 +63,13 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Updated `.github/workflows/pages.yml` to pass `enablement: true` to `actions/configure-pages@v5`, allowing the action to enable the Pages site when it has not yet been created.
 - Commit: `0e0b9d7`.
 - Latest validation run #25 on `c691eb6` passed, including core helper tests. Deployment run #8 on `0e0b9d7` subsequently succeeded through Configure Pages, artifact upload and deployment. Expected site URL: https://hamzaijaz9989.github.io/Lead-Intelligence-OS/. User-side browser confirmation remains pending.
+
+
+## 2026-11-17 — Responsive sales dashboard and demo dataset
+- Expanded `index.html` into a dashboard-first sales workspace while preserving the existing local prospect dossier workflow.
+- Added dashboard pipeline counts for needs review, approved, incomplete, rejected and demo-booked records.
+- Added ICP grade distribution cards and KPI metrics.
+- Added a nine-role Agent Command Centre preview. Agent cards explicitly state that the roles are not connected/running; Qualifier and Oracle are marked as manual prototype functionality.
+- Added a one-click loader for five synthetic example companies across several industries/markets. Synthetic sample URLs use reserved `.example` domains and are not real businesses.
+- Kept localStorage-only persistence and the synthetic-data-only warning visible. No scraping, external enrichment, live agents or outbound messaging was enabled.
+- Code commit: `089c82f`. Automated workflow and browser verification are pending for this dashboard change.
