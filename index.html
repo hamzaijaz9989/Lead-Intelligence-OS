@@ -84,7 +84,7 @@ let records=load(),filter="all",selected=null;
 const $=id=>document.getElementById(id);
 function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function safeUrl(raw,assumeHttps){try{const value=String(raw||"").trim();if(!value)return "";const u=new URL(assumeHttps&&!/^https?:\/\//i.test(value)?"https://"+value:value);return (u.protocol==="https:"||u.protocol==="http:")?u.href:""}catch{return ""}}
-function canonicalDomain(raw){const link=safeUrl(raw,true);if(!link)return String(raw||"").trim();try{return new URL(link).hostname.toLowerCase().replace(/^www\\./,"")}catch{return String(raw||"").trim()}}
+function canonicalDomain(raw){const link=safeUrl(raw,true);if(!link)return String(raw||"").trim();try{return new URL(link).hostname.toLowerCase().replace(/^www\./,"")}catch{return String(raw||"").trim()}}
 function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||"[]");return Array.isArray(x)?x:[]}catch{return[]}}
 function persist(){localStorage.setItem(KEY,JSON.stringify(records));render();}
 function assessment(s){let raw=0,assessedMax=0;categories.forEach(c=>{const v=s?.[c.key];if(v!==null&&v!==undefined&&v!==""){raw+=Math.min(c.max,Math.max(0,Number(v)||0));assessedMax+=c.max}});const coverage=assessedMax;return{raw,assessedMax,coverage,normalized:assessedMax?Math.round(raw/assessedMax*100):0}}
