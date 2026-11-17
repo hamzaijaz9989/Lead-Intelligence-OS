@@ -39,7 +39,7 @@ Track demo requested, booked, confirmed, completed, no-show, rescheduled and dis
 ## 10. Learning loop
 Oracle analyses conversion by source, segment, geography, score band, persona, channel and message. Recommendations should be framed as hypotheses and tested rather than assumed causal.
 
-## Lead views
+## Lead views\nThe prototype includes discovery-stage filters and dashboard counts for discovered, researching, qualified and rejected candidates.
 - Complete Contact Leads: show actual available routes and distinguish direct contact from switchboard.
 - Phone Number Unavailable: show email, professional social and official form alternatives.
 - Research Incomplete: show missing evidence and next research action.
