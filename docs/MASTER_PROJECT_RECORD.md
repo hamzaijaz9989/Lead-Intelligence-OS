@@ -1,6 +1,6 @@
 # Master Project Record — Lead Intelligence OS
 
-**Status:** M1 prototype deployed; M2 manual discovery and channel intelligence implemented; responsive UI refinement in progress  
+**Status:** M1 prototype deployed; M2 manual discovery and channel intelligence implemented; M3 assisted research pack implemented; automated provider research not connected  
 **Version:** 1.0  
 **Last updated:** 2026-11-17  
 **Repository:** https://github.com/hamzaijaz9989/Lead-Intelligence-OS  
@@ -143,7 +143,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - M2 manual discovery stages, source type, multi-channel records with URLs/status/evidence, discovery filters, queue counts and CSV export.
 - Canonical-domain duplicate prevention; potential duplicates open the existing dossier rather than silently merging.
 - Validation scripts and GitHub Actions workflows.
-- Responsive refinement: dashboard and prospect workspace stack at widths up to 1200px; optional research/evidence and ICP scoring fields are expandable sections; header identifies Milestone 2.
+- Responsive refinement: dashboard and prospect workspace stack at widths up to 1200px; optional research/evidence and ICP scoring fields are expandable sections; header identifies the current milestone.\n- M3 assisted research pack: each prospect dossier generates public-web search links for company profile, channels, catalogue/inventory, returns, repair/refurbishment, warehouse/fulfilment, suppliers/procurement, growth/hiring and systems; adds official-domain query when available. Operator must inspect sources and manually record evidence.
 
 **Verified**
 - M2 validation run `44004131271` on commit `80d76d1` passed.
@@ -151,9 +151,9 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - Responsive refinement commit `e9ff1dd` passed validation run `44004473156` and Pages deployment run `44004473184`. M3 operational capture commit `906cb6a` passed static validation run `44004662360`; the operational parser tests were corrected in commit `dcaf40b` and passed in validation run `44004843959`. GitHub Pages deployment run `44004662398` for app commit `906cb6a` also passed.
 
 **Not implemented / not yet verified**
-- Final responsive refinement CI and Pages deployment are pending.
+- Latest assisted-research validation and Pages deployment are pending.
 - Real-device browser acceptance is still required.
-- Live automated company discovery, external research providers, operational intelligence agents, decision-maker/contact enrichment and automated orchestration are not connected.
+- Live automated company discovery, external research providers, automatic page retrieval/scraping, operational intelligence agents, decision-maker/contact enrichment and automated orchestration are not connected.
 - No secure backend, shared database or outbound messaging integration exists. Browser localStorage is not secure or synchronised.
 
 **Data boundary:** Repository is public and prototype records are local to the browser. Use synthetic data only; never put real prospect personal data, private notes, API keys or credentials in this prototype/repository.
@@ -163,7 +163,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 1. Confirm responsive refinement validation and Pages deployment complete successfully.
 2. Test the updated dashboard on a phone and desktop-mode browser; check expandable research and ICP sections.
 3. Complete M2 browser acceptance: duplicate handling, channel status/evidence, discovery filters, counts and CSV export.
-4. Proceed to M3 operational intelligence and permitted-source research design.
+4. Browser-test assisted research links and the full evidence capture workflow.\n5. Design and implement a permitted-source provider integration only after terms, provenance, rate limits and costs are established.
 5. Only describe agents as active after their actual workflows, integrations, logs and tests are implemented.
 
 ## 16. Change-control rule
