@@ -3,7 +3,8 @@
 **Status:** Planning baseline established; implementation not started  
 **Version:** 1.0  
 **Last updated:** 2026-11-17  
-**Repository:** https://github.com/hamzaijaz9989/Lead-Intelligence-OS
+**Repository:** https://github.com/hamzaijaz9989/Lead-Intelligence-OS  
+**Visibility check:** GitHub currently reports this repository as **public**, although the intended setting was private. Change it to private before adding credentials, prospect personal data or other sensitive information.
 
 ## 1. North-star objective
 
@@ -136,7 +137,8 @@ Use least privilege, secret management, minimal retention, access controls, safe
 ## 14. Current project status (2026-11-17)
 
 **Completed**
-- Private GitHub repository found and verified accessible: `hamzaijaz9989/Lead-Intelligence-OS`.
+- GitHub repository found and verified accessible: `hamzaijaz9989/Lead-Intelligence-OS`.
+- Visibility verified as **public**; this conflicts with the intended private setting and must be corrected by the repository owner before sensitive data or credentials are added.
 - Initial README committed.
 - Product north-star and planning baseline captured in this record.
 - Supporting documentation committed: product requirements, architecture proposal, nine agent specifications, logical data model, workflows, security/compliance baseline, milestones, decision log and changelog.
@@ -146,7 +148,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 - Agreement on Milestone 1 acceptance criteria.
 - No application code, dependencies, agents, database, integrations or deployment have been implemented.
 
-**Current phase:** Foundation documentation and milestone definition.
+**Current phase:** Foundation documentation and milestone definition; repository visibility correction required before sensitive data is added.
 
 ## 15. Next actions
 
