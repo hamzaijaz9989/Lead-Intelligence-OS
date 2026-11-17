@@ -118,3 +118,13 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Initial feature commit `42dd282` had an inline parser line-break defect; corrected in `906cb6a`. Validation passed on `906cb6a` (run `44004662360`). The latest helper-test run and Pages deployment are being checked separately.
 
 - Corrected the operational signal test fixture to use actual newline-separated records (commit `dcaf40b`). Latest validation run `44004843959` passed, including application syntax, scoring/evidence, channel parsing and operational intelligence parsing. GitHub Pages deployment run `44004662398` for app commit `906cb6a` passed. Real-device browser acceptance is still outstanding.
+
+
+## 2026-11-17 — UI hierarchy and responsive workspace refinement
+- Reworked visual hierarchy with more consistent spacing, calmer panel surfaces, improved contrast, typography and control states.
+- Reordered the desktop workspace so the prospect list and dossier are the primary area, with prospect intake in a secondary column; on narrower screens the prospect workspace appears before the intake form.
+- Added clear workspace heading and live visible result count.
+- Styled the research profile and ICP sections as accessible collapsible groups, reducing the form's initial visual length while retaining all fields.
+- Improved mobile filter navigation, score grid, dashboard cards and form action visibility.
+- Preserved existing local-first data model, scoring rules, evidence handling and manual-only workflow.
+- UI commit: `0a94c88`. Automated checks and Pages deployment for this visual change are pending.
