@@ -53,3 +53,16 @@
 **Decision:** Planning/documentation is allowed now; application implementation begins only after Milestone 1 scope and acceptance criteria are agreed.  
 **Reason:** User requested agreement before coding.  
 **Implication:** Present M1 for approval before writing app code.
+
+
+## D-010 — Public repository is intentional
+**Date:** 2026-11-17  
+**Decision:** The user confirmed the repository should remain public.  
+**Reason:** Explicit user choice.  
+**Implication:** Never commit API keys, credentials, real prospect contact details or private business data. Treat the repository as public source code only.
+
+## D-011 — Do not adopt OpenProspector as the MVP base yet
+**Date:** 2026-11-17  
+**Decision:** Evaluate OpenProspector as a reference, but build the first thin vertical slice in this repository rather than importing its code/dependencies.  
+**Reason:** It is a young project with provider-heavy enrichment and dependencies on Clawnify packages/agent APIs; it does not directly provide our full ExactFlow operational dossier and qualification workflow. We have not installed or tested it.  
+**Implication:** Keep our first milestone small and independent. Revisit integrations after a separate code/dependency/security review.
