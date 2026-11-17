@@ -13,7 +13,7 @@ const required = [
   'id="detail"',
   "localStorage",
   "function totalScore",
-  "function parseClaims",
+  "function parseClaims",\n  "function parseChannels",\n  "id=\\"discoveryStatus\\"",\n  "id=\\"channels\\"",\n  "data-stage",
   "function safeUrl",
   "function canonicalDomain",
   "data-review",
