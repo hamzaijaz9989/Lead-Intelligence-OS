@@ -73,3 +73,17 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Added a one-click loader for five synthetic example companies across several industries/markets. Synthetic sample URLs use reserved `.example` domains and are not real businesses.
 - Kept localStorage-only persistence and the synthetic-data-only warning visible. No scraping, external enrichment, live agents or outbound messaging was enabled.
 - Code commit: `089c82f`. Automated workflow and browser verification are pending for this dashboard change.
+
+
+## 2026-11-17 — M2 manual company discovery and channel intelligence
+- Added discovery-stage tracking to prospect records: discovered, researching, qualified and rejected.
+- Added discovery source type and retained the primary source URL.
+- Added multi-channel mapping with channel name, optional channel URL, confirmed/likely/unverified status and optional evidence-source URL.
+- Added discovery-stage filters and dashboard queue counts.
+- Added discovery stage actions in the prospect dossier.
+- Added canonical-domain duplicate prevention: when a different record already uses the same canonical domain, the app opens the existing dossier and blocks a second record; it does not silently merge.
+- Extended CSV export with discovery stage, source type and channel summary.
+- Extended static validation and core helper tests to cover discovery fields and channel parsing.
+- Updated PRD, logical data model, workflows, milestone tracker and Master Project Record.
+- UI feature commit: `2f0d72b`; dashboard queue commit: `022f5e7`; validation/test updates: `9374a72` and `d301980`.
+- M2 automated validation and Pages deployment outcomes are pending. Live automated discovery, external provider calls and agent orchestration are not enabled.
