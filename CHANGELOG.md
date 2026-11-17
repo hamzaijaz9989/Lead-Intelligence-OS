@@ -62,4 +62,4 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Confirmed the repository Pages settings screen already has **GitHub Actions** selected as the source.
 - Updated `.github/workflows/pages.yml` to pass `enablement: true` to `actions/configure-pages@v5`, allowing the action to enable the Pages site when it has not yet been created.
 - Commit: `0e0b9d7`.
-- Latest validation run #25 on `c691eb6` passed, including core helper tests. The new Pages deployment outcome remains pending; do not claim the app is live until verified.
+- Latest validation run #25 on `c691eb6` passed, including core helper tests. Deployment run #8 on `0e0b9d7` subsequently succeeded through Configure Pages, artifact upload and deployment. Expected site URL: https://hamzaijaz9989.github.io/Lead-Intelligence-OS/. User-side browser confirmation remains pending.
