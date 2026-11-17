@@ -148,7 +148,7 @@ Use least privilege, secret management, minimal retention, access controls, safe
 **Verified**
 - M2 validation run `44004131271` on commit `80d76d1` passed.
 - M2 Pages deployment run `44004131345` on commit `80d76d1` passed.
-- Responsive refinement commit `e9ff1dd` passed validation run `44004473156` and Pages deployment run `44004473184`.
+- Responsive refinement commit `e9ff1dd` passed validation run `44004473156` and Pages deployment run `44004473184`. M3 operational capture commit `906cb6a` passed static validation run `44004662360`; the subsequent parser-test update is in commit `ef79af9` and its workflow is pending.
 
 **Not implemented / not yet verified**
 - Final responsive refinement CI and Pages deployment are pending.
