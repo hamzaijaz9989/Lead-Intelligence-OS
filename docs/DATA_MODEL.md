@@ -8,7 +8,7 @@ This is a logical model, not a committed database migration. IDs should be stabl
 - **sales_channels:** channel_id, company_id, channel_type, channel_url, identifier, status (confirmed/likely/unverified), evidence_id, confidence, last_checked.
 - **operational_signals:** signal_id, company_id, category, claim, status (fact/hypothesis/unknown/contradicted), confidence, evidence_id, observed_at.
 - **people:** person_id, company_id, full_name, job_title, department, seniority, professional_profile_url, relevance_reason, attribution_status, last_checked.
-- **contact_details:** contact_id, company_id, person_id nullable, channel_type, destination, contact_type, verification_status, permission_status, source_id, confidence, discovered_at, last_checked, notes.
+- **contact_details:** contact_id, company_id, person_id nullable, channel_type, destination, contact_type, verification_status, permission_status, source_id, confidence, discovered_at, last_checked, notes.\n- The local prototype stores public professional contact routes in a `contacts` array: name, role, professional email, published business phone, phone type (direct/switchboard/department/unknown), professional profile URL, evidence source URL and verification state. This is not a secure contact database; synthetic data only until secure backend and access controls exist.
 - **phone_numbers:** phone_id, company_id, person_id nullable, raw_number, international_format, country_code, phone_type, source_id, verification_status, confidence, discovered_at, last_checked, channel_eligibility, notes.
 - **social_profiles:** profile_id, company_id, person_id nullable, platform, profile_url, profile_type, attribution_status, source_id, confidence, last_checked, channel_eligibility.
 - **communication_channels:** channel_id, company_id, person_id nullable, channel_type, destination, source_id, verification_status, permission_status, restriction_reason, recommended_action, last_checked.
@@ -31,7 +31,7 @@ Company 1:N aliases, channels, operational signals, people, contacts, evidence, 
 ## Data integrity rules
 - Canonicalise domains and phone numbers; preserve raw source representation.\n- Discovery status is one of discovered/researching/qualified/rejected; channel status is confirmed/likely/unverified and must remain distinct from legal permission to contact.\n- Detect exact canonical-domain duplicates before creating a second company; do not silently merge records. Human review is required for possible duplicates or shared domains.
 - A phone/email/profile cannot be marked verified without a recorded basis and source.
-- Distinguish contact discovery, technical verification and marketing permission.
+- Distinguish contact discovery, technical verification and marketing permission. A published business route is not proof of permission to send marketing; check applicable country/channel rules and suppression.
 - Never overwrite historical evidence silently; record new observations and freshness.
 - Enforce suppression at recommendation and action time.
 - Use unique constraints/dedupe keys where safe, with human merge support.
