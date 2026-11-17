@@ -106,3 +106,5 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Updated the header milestone label to “Milestone 2 · Discovery Workspace”.
 - Responsive layout commit: `82500b2`; expandable form sections commit: `e9ff1dd`.
 - Validation and Pages deployment for the latest responsive refinement are pending; do not mark browser acceptance complete until tested on a phone.
+
+- Responsive refinement commit `e9ff1dd` passed GitHub Actions validation run `44004473156` and GitHub Pages deployment run `44004473184`; mobile browser acceptance remains to be performed by the user.
