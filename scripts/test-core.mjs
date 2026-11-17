@@ -12,9 +12,9 @@ const coreSource = [
   between("const categories=[", "let records="),
   between("function safeUrl", "function load"),
   between("function assessment", "function toast"),
-  between("function parseClaims", "function clearForm")
+  between("function parseChannels", "function clearForm")
 ].join("\n");
-const core = new Function(coreSource + "\nreturn { assessment, grade, safeUrl, canonicalDomain, parseClaims };")();
+const core = new Function(coreSource + "\nreturn { assessment, grade, safeUrl, canonicalDomain, parseClaims, parseChannels };")();
 
 assert.equal(core.assessment({}).coverage, 0, "blank criteria should have zero evidence coverage");
 assert.equal(core.grade(100, 0), "Unrated", "no evidence must not receive a grade");
@@ -31,3 +31,10 @@ assert.equal(claims.length, 2);
 assert.equal(claims[0].status, "FACT");
 assert.equal(claims[1].status, "HYPOTHESIS");
 console.log("Lead Intelligence OS core tests passed.");
+
+const channels = core.parseChannels("CHANNEL | Shopify | https://shop.example | CONFIRMED | https://source.example\\nCHANNEL | Amazon | https://amazon.example | MAYBE |");
+assert.equal(channels.length, 2);
+assert.equal(channels[0].status, "CONFIRMED");
+assert.equal(channels[1].status, "UNVERIFIED", "unknown channel states must default to unverified");
+assert.equal(channels[1].name, "Amazon");
+console.log("Discovery and channel mapping tests passed.");
