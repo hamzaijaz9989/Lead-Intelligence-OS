@@ -139,3 +139,15 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - No external search API, automatic page retrieval, scraping or live AI research is connected.
 - Feature commits: `afc7f99`, `1377908`; validation/test commits: `dbb51bd`, `490c64c`.
 - Automated validation and Pages deployment are pending.
+
+
+## 2026-11-17 — M4 manual professional contact intelligence
+- Added a structured manual contact capture field for public professional decision-makers: name, role, professional email, published business phone, phone type, professional profile URL, evidence source URL and verification state.
+- Distinguishes direct, switchboard and department numbers; unsupported types remain unknown.
+- Only explicit VERIFIED is retained as verified; all other values default to UNVERIFIED.
+- Contact details are restored when editing, rendered in the dossier with source links and included in CSV export.
+- Added tests for multiple contacts, phone-type distinction and conservative verification defaults.
+- Updated product requirements, data model, workflows, Master Project Record and milestone tracker.
+- Feature commit: `563de08`; contact parser/render fixes: `71df0be`, `7b2cb0d`; test/validation updates: `cac5165`, `272512d`, `d77c5dc`.
+- Initial CI run exposed a malformed test-file separator; the test file has been rebuilt. Final validation and deployment are pending.
+- Safety boundary: only public professional/business routes; no private personal contact data. Public availability and technical verification are not marketing permission. Synthetic data only until secure storage is implemented.
