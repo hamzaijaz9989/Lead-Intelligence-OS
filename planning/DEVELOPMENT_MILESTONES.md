@@ -22,7 +22,7 @@
 - [x] Normalised score, evidence coverage and grade withheld below 60% coverage.
 - [x] Dossier view and human review states (approve, incomplete, reject).
 - [x] Manual demo-booked flag and CSV export.
-- [x] HTTP(S)-only links for user-entered website and evidence URLs.
+- [x] Canonicalise company website hostname and restrict rendered website/evidence links to HTTP(S).
 - [x] Static validation script and GitHub Actions workflow added.
 - [x] GitHub Pages deployment workflow added.
 
