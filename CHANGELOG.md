@@ -29,3 +29,13 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Decision: do not import/adopt it as the initial base. Its provider/agent assumptions and enrichment-first workflow add complexity before our evidence-led ExactFlow dossier is proven.
 - M1 implementation approach: static local-first prototype, no secrets/no external calls, synthetic data only; localStorage is explicitly not production-safe or shared storage.
 - Next: implement company capture, evidence/claim tracking, ICP scoring, dossier and human review; then verify behaviour and Pages workflow.
+
+
+## 2026-11-17 — First M1 prototype committed
+- Added root `index.html`: local-first prospect dossier workspace with company capture, source URL, research summary, structured evidence claims, weighted ICP criteria, dossier details, approval/incomplete/rejected states, manual demo booking log, search/filter and CSV export.
+- Added strict HTTP(S)-only link handling for user-entered source and company URLs.
+- Changed ICP inputs so unresearched categories remain blank, not zero. Scores are normalised over assessed weighted criteria; evidence coverage is displayed; grade/high-priority status is withheld until at least 60% of weighted criteria are assessed.
+- Added `scripts/validate.mjs` for inline JavaScript syntax and basic feature/network-boundary checks.
+- Added GitHub Actions validation and GitHub Pages deployment workflows.
+- No provider keys, real contact data, outbound sending, scraping or live AI calls included.
+- Validation and Pages deployment have not yet been confirmed; browser-level testing remains pending.
