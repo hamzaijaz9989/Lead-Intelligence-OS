@@ -14,13 +14,13 @@ Goal: prove one complete, auditable path from a candidate company to a reviewed 
 
 Approved work:
 1. Inspect candidate starter repositories and dependencies; compare license, maintenance, architecture, scripts, permissions, secrets, data flows and security concerns.
-2. Select build foundation and runtime only after review.
-3. Establish minimal application skeleton and data model.
-4. Add manual company entry/import and source evidence capture.
-5. Add basic research notes with fact/hypothesis/unknown status.
-6. Implement first explainable ICP scoring pass.
-7. Render a basic dossier and human review state.
-8. Add run/change logs and tests.
+6. Select a future backend foundation only after further review.
+7. Establish future secure persistence and data model.
+8. Extend manual company entry/import and source evidence capture.
+9. Add structured research notes with fact/hypothesis/unknown status.
+10. Implement explainable ICP scoring and evidence coverage.
+11. Render a basic dossier and human review state.
+12. Add run/change logs and expanded tests.
 
 Acceptance criteria:
 - A company can be created with canonical domain, country and source.
