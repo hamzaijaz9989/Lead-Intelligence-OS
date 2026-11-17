@@ -151,3 +151,5 @@ All meaningful project changes are recorded here. Dates use ISO format.
 - Feature commit: `563de08`; contact parser/render fixes: `71df0be`, `7b2cb0d`; test/validation updates: `cac5165`, `272512d`, `d77c5dc`.
 - Initial CI run exposed a malformed test-file separator; the test file has been rebuilt. Final validation and deployment are pending.
 - Safety boundary: only public professional/business routes; no private personal contact data. Public availability and technical verification are not marketing permission. Synthetic data only until secure storage is implemented.
+
+- Updated the dashboard milestone indicator to M4 · Contact Intelligence; UI commit: `b28f249`. Validation and Pages deployment are being checked.
